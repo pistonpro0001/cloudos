@@ -220,3 +220,5 @@ __marimo__/
 # Other
 oswars.db
 nohup.out
+oswars.db
+.gofile_db_state.json

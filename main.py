@@ -350,7 +350,8 @@ def run_bot():
                 log("Executor falling back to Session ID...", "red")
                 session = sa.login_by_id(os.getenv("SC_SESS_ID"))
                 
-            cloud = session.connect_cloud(project_id="1384039906")
+            cloud = session.connect_cloud(project_id="1384551602")
+            print(cloud.get_all_vars())
             log("Executor Cloud Connection Ready", "lime")
             
             while True:
@@ -411,7 +412,7 @@ def start_listener():
             except:
                 session2 = sa.login_by_id(os.getenv("SC_SESS_ID"))
                 
-            cloud2 = session2.connect_cloud(project_id="1384039906")
+            cloud2 = session2.connect_cloud(project_id="1384551602")
             events = cloud2.events()
             
             @events.event
